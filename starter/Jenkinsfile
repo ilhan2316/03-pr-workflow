@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                sh 'docker build -t team-skeleton .'
+                sh 'docker build -t team-skeleton -f starter/Dockerfile starter'
             }
         }
         stage('Smoke Test') {
